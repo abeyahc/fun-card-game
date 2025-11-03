@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwn76pxgyito2"]
+
+[ext_resource type="PackedScene" uid="uid://dcq04qg0g6jbo" path="res://Scenes/deck_manager.tscn" id="1_a4ag4"]
+[ext_resource type="PackedScene" uid="uid://bltkmhfbaf0d8" path="res://Scenes/deck.tscn" id="2_mb015"]
+
+[node name="World" type="Node2D"]
+
+[node name="DeckManager" parent="." instance=ExtResource("1_a4ag4")]
+
+[node name="DeckP1" parent="DeckManager" instance=ExtResource("2_mb015")]
