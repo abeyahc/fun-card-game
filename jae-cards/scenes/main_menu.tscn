@@ -1,44 +1,48 @@
 [gd_scene load_steps=9 format=3 uid="uid://ck7cl8fjh1yc2"]
 
-[ext_resource type="Script" uid="uid://d17cwu2cg3yms" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://c0ywo8eg3xgjf" path="res://assets/menu/example titlescreen.jpg" id="1_l6cm7"]
-[ext_resource type="FontFile" uid="uid://cq5mdr6dypnpf" path="res://assets/menu/ChronoType.otf" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://cq5mdr6dypnpf" path="res://assets/menu/ChronoType.otf" id="3_t7646"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekxnf"]
 texture = ExtResource("1_l6cm7")
-modulate_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
+modulate_color = Color(0.404511, 0.404511, 0.404511, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6cm7"]
-bg_color = Color(0.9315642, 0.9115573, 0.9108769, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fd0s"]
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-corner_detail = 7
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+shadow_color = Color(0, 0, 0, 0.552941)
+shadow_size = 4
+shadow_offset = Vector2(10, -1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqqt6"]
-bg_color = Color(0.4513781, 0.37904677, 0.35489684, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4y3cg"]
+bg_color = Color(0.509286, 0.509286, 0.509286, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-corner_detail = 7
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+shadow_color = Color(0, 0, 0, 0.552941)
+shadow_size = 4
+shadow_offset = Vector2(10, -1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
-bg_color = Color(0.6615337, 0.5806246, 0.55184704, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oum8r"]
+bg_color = Color(0.359069, 0.359069, 0.359069, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-corner_detail = 7
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+shadow_color = Color(0, 0, 0, 0.552941)
+shadow_size = 4
+shadow_offset = Vector2(10, -1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ekxnf"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1blc1"]
+bg_color = Color(0.631373, 0.6, 0.501961, 0)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -77,67 +81,66 @@ theme_override_constants/separation = 9
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_l6cm7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_t7646")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_3fd0s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4y3cg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oum8r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1blc1")
 text = "Start"
 
 [node name="options" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_l6cm7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_t7646")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_3fd0s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4y3cg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oum8r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1blc1")
 text = "Options"
 
 [node name="exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ekxnf")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_l6cm7")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_bqqt6")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ekxnf")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ekxnf")
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_t7646")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_3fd0s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4y3cg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oum8r")
+theme_override_styles/focus = SubResource("StyleBoxFlat_1blc1")
 text = "Exit"
 
-[node name="title" type="Label" parent="."]
+[node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -287.25
-offset_top = -247.0
-offset_right = 287.25
-offset_bottom = -45.0
+offset_left = -134.5
+offset_top = -205.0
+offset_right = 134.5
+offset_bottom = -147.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
-theme_override_constants/shadow_offset_x = 10
-theme_override_fonts/font = ExtResource("2_ekxnf")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_fonts/font = ExtResource("3_t7646")
 theme_override_font_sizes/font_size = 80
 text = "CARD GAME"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
