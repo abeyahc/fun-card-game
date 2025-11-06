@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlyvq7oyyut8v"
-path="res://.godot/imported/medkit.png-b2e933336811e8b82ee158ed20f27bd0.ctex"
+uid="uid://c0ywo8eg3xgjf"
+path="res://.godot/imported/example titlescreen.jpg-0845a02b090388500a1007de68776548.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/medkit.png"
-dest_files=["res://.godot/imported/medkit.png-b2e933336811e8b82ee158ed20f27bd0.ctex"]
+source_file="res://assets/menu/example titlescreen.jpg"
+dest_files=["res://.godot/imported/example titlescreen.jpg-0845a02b090388500a1007de68776548.ctex"]
 
 [params]
 
