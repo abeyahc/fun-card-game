@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0gq2aem24kvy"]
+
+[ext_resource type="Texture2D" uid="uid://cnurpvka23nw6" path="res://assets/player/blue_bar_square_small_l.svg" id="1_tokvp"]
+[ext_resource type="Texture2D" uid="uid://di7ynkgranx8e" path="res://assets/player/blue_bar_square_small_m.svg" id="2_rawxk"]
+[ext_resource type="Texture2D" uid="uid://ehmtf2rfbpq3" path="res://assets/player/blue_bar_square_small_r.svg" id="3_uo7db"]
+
+[node name="APBar" type="GridContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1, 0.7)
+theme_override_constants/h_separation = 2
+columns = 10
+
+[node name="APLeft" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_tokvp")
+expand_mode = 2
+
+[node name="APMid0" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_rawxk")
+
+[node name="APMid1" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_rawxk")
+
+[node name="APMid2" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_rawxk")
+
+[node name="APMid3" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_rawxk")
+
+[node name="APMid4" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_rawxk")
+
+[node name="APMid5" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_rawxk")
+
+[node name="APMid6" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_rawxk")
+
+[node name="APRight" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("3_uo7db")
+expand_mode = 2

@@ -10,13 +10,11 @@ func _ready():
 
 func _set_health(value):
 	health = value
-	print("new health " + str(health))
 	healthbar.health = health
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
 
 func _on_bar_tester_pressed():
 	health -= 10
