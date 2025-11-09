@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk4iwi7886ske"]
+
+[ext_resource type="Texture2D" uid="uid://f5rv12l7hyjg" path="res://assets/player/bar_shadow_square_outline_small.svg" id="1_8ia07"]
+[ext_resource type="Texture2D" uid="uid://oqadndqyin7d" path="res://assets/player/bar_square_small.svg" id="2_oiatx"]
+[ext_resource type="Script" path="res://scenes/player/health.gd" id="3_lwv3c"]
+[ext_resource type="Texture2D" uid="uid://cska84l31rcyp" path="res://assets/player/red_bar_square_small.svg" id="4_jx1iy"]
+
+[node name="HPBar" type="TextureProgressBar"]
+z_index = 100
+offset_left = -1.0
+offset_top = 55.0
+offset_right = 95.0
+offset_bottom = 71.0
+scale = Vector2(1.5, 0.7)
+value = 60.0
+texture_under = ExtResource("1_8ia07")
+texture_progress = ExtResource("2_oiatx")
+script = ExtResource("3_lwv3c")
+
+[node name="DamageBar" type="TextureProgressBar" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 80.0
+texture_progress = ExtResource("4_jx1iy")
+
+[node name="DamageTimer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="DamageTimer" to="." method="_on_damage_timer_timeout"]
