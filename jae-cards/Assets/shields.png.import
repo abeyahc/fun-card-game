@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlyvq7oyyut8v"
-path="res://.godot/imported/medkit.png-98fc29ccf50a4b5d92edb5da2cb16e7f.ctex"
+uid="uid://wn55v6t6q16p"
+path="res://.godot/imported/shields.png-49db5fb01a71071215cd5e0c43e26f73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/medkit.png"
-dest_files=["res://.godot/imported/medkit.png-98fc29ccf50a4b5d92edb5da2cb16e7f.ctex"]
+source_file="res://Assets/shields.png"
+dest_files=["res://.godot/imported/shields.png-49db5fb01a71071215cd5e0c43e26f73.ctex"]
 
 [params]
 
