@@ -1,10 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwn76pxgyito2"]
+[gd_scene load_steps=4 format=3 uid="uid://cwn76pxgyito2"]
 
-[ext_resource type="PackedScene" uid="uid://dcq04qg0g6jbo" path="res://scenes/deck_manager.tscn" id="1_a4ag4"]
-[ext_resource type="PackedScene" uid="uid://bltkmhfbaf0d8" path="res://scenes/deck.tscn" id="2_mb015"]
+[ext_resource type="PackedScene" uid="uid://dcq04qg0g6jbo" path="res://Scenes/deck_manager.tscn" id="1_a4ag4"]
+[ext_resource type="PackedScene" uid="uid://bltkmhfbaf0d8" path="res://Scenes/deck.tscn" id="2_mb015"]
+[ext_resource type="PackedScene" uid="uid://bij5phd0nigr0" path="res://Scenes/player/player.tscn" id="3_tx5lt"]
 
 [node name="World" type="Node2D"]
 
 [node name="DeckManager" parent="." instance=ExtResource("1_a4ag4")]
 
 [node name="DeckP1" parent="DeckManager" instance=ExtResource("2_mb015")]
+
+[node name="DeckP2" parent="DeckManager" instance=ExtResource("2_mb015")]
+position = Vector2(330, 270)
+owner_id = &"P2"
+
+[node name="P1" parent="." instance=ExtResource("3_tx5lt")]
+position = Vector2(-350, -25)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="P2" parent="." instance=ExtResource("3_tx5lt")]
+position = Vector2(281, -15)
+scale = Vector2(-1, 1)
+owner_id = &"P2"

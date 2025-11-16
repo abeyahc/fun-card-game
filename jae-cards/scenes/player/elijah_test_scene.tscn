@@ -1,11 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://12mqjca24ywj"]
 
-[ext_resource type="PackedScene" uid="uid://bij5phd0nigr0" path="res://scenes/player/player.tscn" id="1_6qe3y"]
+[ext_resource type="PackedScene" uid="uid://bij5phd0nigr0" path="res://Scenes/player/player.tscn" id="1_6qe3y"]
 
 [node name="ElijahTestScene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_6qe3y")]
 position = Vector2(31, 44)
+owner_id = null
+deck_path = null
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(36, 34)
