@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3eex8wrl1tlv"
-path="res://.godot/imported/noBKG_KnightIdle_strip.png-050b1e5d7dd407a046c4eddc4d0527a2.ctex"
+path="res://.godot/imported/noBKG_KnightIdle_strip.png-a8734249a66219387ec960b52cdfcd75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/noBKG_KnightIdle_strip.png"
-dest_files=["res://.godot/imported/noBKG_KnightIdle_strip.png-050b1e5d7dd407a046c4eddc4d0527a2.ctex"]
+source_file="res://Assets/player/noBKG_KnightIdle_strip.png"
+dest_files=["res://.godot/imported/noBKG_KnightIdle_strip.png-a8734249a66219387ec960b52cdfcd75.ctex"]
 
 [params]
 

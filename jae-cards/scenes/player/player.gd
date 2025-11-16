@@ -1,10 +1,12 @@
 extends Node2D
-class_name Player_User
 
 @onready var healthbar: TextureProgressBar = $HPBar
 @export var owner_id: StringName = &"P1"        
-@export var deck_path: NodePath                  
+@export var deck_path: NodePath
+@export var deck_manager_path: NodePath
+			 
 var deck: Deck
+var deck_manager: DeckManager
 
 var health:float = 100
 var alive:bool = true
@@ -25,5 +27,11 @@ func _process(delta):
 func _on_bar_tester_pressed():
 	health -= 10
 	_set_health(health)
+	
+	deck_manager = get_node(deck_manager_path) as DeckManager
+	if deck_manager:
+		deck_manager.play_turn()
+	else:
+		push_warning("DeckManager not found for player " + str(owner_id))
 
 

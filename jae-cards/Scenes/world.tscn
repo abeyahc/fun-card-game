@@ -7,6 +7,8 @@
 [node name="World" type="Node2D"]
 
 [node name="DeckManager" parent="." instance=ExtResource("1_a4ag4")]
+deck_p1_path = NodePath("DeckP1")
+deck_p2_path = NodePath("DeckP2")
 
 [node name="DeckP1" parent="DeckManager" instance=ExtResource("2_mb015")]
 
@@ -16,6 +18,8 @@ owner_id = &"P2"
 
 [node name="P1" parent="." instance=ExtResource("3_tx5lt")]
 position = Vector2(-350, -25)
+deck_path = NodePath("../DeckManager/DeckP1")
+deck_manager_path = NodePath("../DeckManager")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -23,3 +27,5 @@ position = Vector2(-350, -25)
 position = Vector2(281, -15)
 scale = Vector2(-1, 1)
 owner_id = &"P2"
+deck_path = NodePath("../DeckManager/DeckP2")
+deck_manager_path = NodePath("../DeckManager")
