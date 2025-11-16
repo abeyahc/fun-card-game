@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cq5mdr6dypnpf"
-path="res://.godot/imported/ChronoType.otf-88ba5aeeb46bce8a82a4ab77817fd52e.fontdata"
+path="res://.godot/imported/ChronoType.otf-0bee8ba1ae24ee262a00a436fe7efb5d.fontdata"
 
 [deps]
 
-source_file="res://assets/menu/ChronoType.otf"
-dest_files=["res://.godot/imported/ChronoType.otf-88ba5aeeb46bce8a82a4ab77817fd52e.fontdata"]
+source_file="res://Assets/menu/ChronoType.otf"
+dest_files=["res://.godot/imported/ChronoType.otf-0bee8ba1ae24ee262a00a436fe7efb5d.fontdata"]
 
 [params]
 

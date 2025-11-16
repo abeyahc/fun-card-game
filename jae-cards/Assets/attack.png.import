@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di7ynkgranx8e"
-path="res://.godot/imported/blue_bar_square_small_m.svg-66e699ef168d8bce54cd35e999958832.ctex"
+uid="uid://cpime8esdfggd"
+path="res://.godot/imported/attack.png-1c73ae8aee494928bffe37a0c53ce9c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/player/blue_bar_square_small_m.svg"
-dest_files=["res://.godot/imported/blue_bar_square_small_m.svg-66e699ef168d8bce54cd35e999958832.ctex"]
+source_file="res://Assets/attack.png"
+dest_files=["res://.godot/imported/attack.png-1c73ae8aee494928bffe37a0c53ce9c4.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
