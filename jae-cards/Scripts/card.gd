@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 class_name Card
 
 signal played(target: Node)
@@ -9,4 +9,3 @@ signal played(target: Node)
 
 func play(target: Node = null) -> void:
 	played.emit(target)
-
