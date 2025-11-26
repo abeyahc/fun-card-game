@@ -4,25 +4,34 @@ class_name Deck
 signal needs_cards(owner_id: StringName, missing: int)
 signal hand_count_changed(count: int)
 
-@export var owner_id: StringName = &"P1"   
+@export var owner_id: StringName = &"P1"
 @export var max_hand_size: int = 6
 
 var _is_filling := false
 
 func _ready() -> void:
-	_ensure_min_hand()
+	if multiplayer.is_server():
+		randomize()
+
 
 func refill() -> void:
-	_ensure_min_hand()
+	if multiplayer.is_server():
+		_ensure_min_hand()
+
 
 func begin_bulk_fill() -> void:
 	_is_filling = true
 
+
 func end_bulk_fill() -> void:
 	_is_filling = false
-	_emit_count_and_top_off()
+	_emit_count()
 
-func give_card(card_src) -> void:
+
+func give_card(card_src: Variant) -> void:
+	if not multiplayer.is_server():
+		return
+
 	var card: Card = null
 	if card_src is PackedScene:
 		card = (card_src as PackedScene).instantiate() as Card
@@ -33,29 +42,25 @@ func give_card(card_src) -> void:
 
 	card.name = "Card_%d" % _card_count()
 	add_child(card)
+
 	print("[Deck ", owner_id, "] added ", card.name)
 
-	if not _is_filling:
-		_emit_count_and_top_off()
+	_emit_count()
 
-func _emit_count_and_top_off() -> void:
-	var c := _card_count()
-	print("[Deck ", owner_id, "] card count = ", c)
-	hand_count_changed.emit(c)
-	if not _is_filling:
-		_ensure_min_hand()
+func _emit_count() -> void: 
+	var c := _card_count() 
+	print("[Deck ", owner_id, "] card count = ", c) 
+	hand_count_changed.emit(c) 
 
-func _ensure_min_hand() -> void:
-	if _is_filling:
-		return
-	var missing := max_hand_size - _card_count()
-	if missing > 0:
-		print("[Deck ", owner_id, "] needs ", missing)
-		needs_cards.emit(owner_id, missing)
+func _ensure_min_hand() -> void: 
+	var missing := max_hand_size - _card_count() 
+	if missing > 0: 
+		print("[Deck ", owner_id, "] needs ", missing) 
+		needs_cards.emit(owner_id, missing) 
 
-func _card_count() -> int:
-	var n := 0
-	for child in get_children():
-		if child is Card:
-			n += 1
+func _card_count() -> int: 
+	var n := 0 
+	for child in get_children(): 
+		if child is Card: 
+			n += 1 
 	return n

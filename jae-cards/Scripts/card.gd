@@ -3,7 +3,7 @@ class_name Card
 
 signal played(target: Node)
 
-@export var card_name: String = "Placeholder"
+@export var card_name: String = "Placeholder" 
 @export var cost: int = 0
 @export var payload: Dictionary = {}
 

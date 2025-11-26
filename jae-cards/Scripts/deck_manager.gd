@@ -1,14 +1,17 @@
 extends Node
 class_name DeckManager
 
-
 @export var card_pool: Array[PackedScene] = []
 @export var deck_p1_path: NodePath
 @export var deck_p2_path: NodePath
 
-var decks := {}   
+var decks := {}
 
 func _ready() -> void:
+	if not Net.is_server: 
+		return
+	if card_pool.is_empty():
+		push_warning("DeckManager: card_pool is empty; decks will request forever.")
 	var d1: Deck = null
 	if deck_p1_path != NodePath(""):
 		d1 = get_node_or_null(deck_p1_path) as Deck
@@ -23,14 +26,14 @@ func _ready() -> void:
 
 	if d1:
 		decks[String(d1.owner_id)] = d1
-		d1.needs_cards.connect(_on_needs_cards.bind(d1))
+		d1.needs_cards.connect(Callable(self, "_on_needs_cards").bind(d1))
 		d1.refill()
 	else:
 		push_warning("DeckManager: DeckP1 not found (set deck_p1_path or add child 'DeckP1').")
 
 	if d2:
 		decks[String(d2.owner_id)] = d2
-		d2.needs_cards.connect(_on_needs_cards.bind(d2))
+		d2.needs_cards.connect(Callable(self, "_on_needs_cards").bind(d2))
 		d2.refill()
 	else:
 		push_warning("DeckManager: DeckP2 not found (set deck_p2_path or add child 'DeckP2').")

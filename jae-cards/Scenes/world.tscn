@@ -1,21 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwn76pxgyito2"]
+[gd_scene load_steps=5 format=3 uid="uid://cwn76pxgyito2"]
 
 [ext_resource type="PackedScene" uid="uid://dcq04qg0g6jbo" path="res://Scenes/deck_manager.tscn" id="1_a4ag4"]
+[ext_resource type="Script" path="res://Scripts/world.gd" id="1_hjjtc"]
 [ext_resource type="PackedScene" uid="uid://bltkmhfbaf0d8" path="res://Scenes/deck.tscn" id="2_mb015"]
 [ext_resource type="PackedScene" uid="uid://bij5phd0nigr0" path="res://Scenes/player/player.tscn" id="3_tx5lt"]
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_hjjtc")
 
 [node name="DeckManager" parent="." instance=ExtResource("1_a4ag4")]
+deck_p1_path = NodePath("DeckP1")
+deck_p2_path = NodePath("DeckP2")
 
 [node name="DeckP1" parent="DeckManager" instance=ExtResource("2_mb015")]
+
+[node name="Spawner" type="MultiplayerSpawner" parent="DeckManager/DeckP1"]
+_spawnable_scenes = PackedStringArray("res://Scenes/card.tscn")
+spawn_path = NodePath("\".\"")
 
 [node name="DeckP2" parent="DeckManager" instance=ExtResource("2_mb015")]
 position = Vector2(330, 270)
 owner_id = &"P2"
 
+[node name="Spawner" type="MultiplayerSpawner" parent="DeckManager/DeckP2"]
+_spawnable_scenes = PackedStringArray("res://Scenes/card.tscn")
+spawn_path = NodePath("\".\"")
+
 [node name="P1" parent="." instance=ExtResource("3_tx5lt")]
 position = Vector2(-350, -25)
+deck_path = NodePath("../DeckManager/DeckP1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -23,3 +36,13 @@ position = Vector2(-350, -25)
 position = Vector2(281, -15)
 scale = Vector2(-1, 1)
 owner_id = &"P2"
+deck_path = NodePath("../DeckManager/DeckP2")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="TurnLabel" type="Label" parent="UI"]
+offset_left = -104.0
+offset_top = -242.0
+offset_right = 110.0
+offset_bottom = -168.0
+text = "dasddsad"

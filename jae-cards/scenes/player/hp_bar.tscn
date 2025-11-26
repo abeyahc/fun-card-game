@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dk4iwi7886ske"]
 
-[ext_resource type="Texture2D" uid="uid://f5rv12l7hyjg" path="res://assets/player/bar_shadow_square_outline_small.svg" id="1_fmt47"]
-[ext_resource type="Texture2D" uid="uid://oqadndqyin7d" path="res://assets/player/bar_square_small.svg" id="2_ol08y"]
+[ext_resource type="Texture2D" uid="uid://f5rv12l7hyjg" path="res://Assets/player/bar_shadow_square_outline_small.svg" id="1_fmt47"]
+[ext_resource type="Texture2D" uid="uid://oqadndqyin7d" path="res://Assets/player/bar_square_small.svg" id="2_ol08y"]
 [ext_resource type="Script" path="res://scenes/player/health.gd" id="3_e2rvn"]
-[ext_resource type="Texture2D" uid="uid://cska84l31rcyp" path="res://assets/player/red_bar_square_small.svg" id="4_8ubqi"]
+[ext_resource type="Texture2D" uid="uid://cska84l31rcyp" path="res://Assets/player/red_bar_square_small.svg" id="4_8ubqi"]
 
 [node name="HPBar" type="TextureProgressBar"]
 z_index = 100
